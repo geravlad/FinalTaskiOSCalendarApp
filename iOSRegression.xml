@@ -4,7 +4,7 @@
 <suite name="iOS Regression Suite">
     <test verbose="2" name="iOS Regression">
         <classes>
-<!--            <class name="tests.NewEventTest"/>-->
+            <class name="tests.NewEventTest"/>
             <class name="tests.AddCalendarTest"/>
         </classes>
     </test>
