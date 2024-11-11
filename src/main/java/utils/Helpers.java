@@ -1,7 +1,9 @@
 package utils;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 
+import io.appium.java_client.touch.offset.PointOption;
 import io.qameta.allure.Step;
 
 import org.openqa.selenium.Dimension;

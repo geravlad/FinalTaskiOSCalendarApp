@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.GlobalVariables;
+import utils.Helpers;
 
 public class CalendarsPage extends Helpers {
 
