@@ -70,4 +70,11 @@ public class Helpers {
         Dimension size = element.getSize();
         return new Point(location.x + size.getWidth() / 2, location.y + size.getHeight() / 2);
     }
+
+    public void clickCoordinates(IOSDriver driver, int x, int y) {
+        TouchAction touchAction = new TouchAction(driver);
+        int xPoint = x;
+        int yPoint = y;
+        touchAction.tap(PointOption.point(xPoint , yPoint)).perform();
+    }
 }
