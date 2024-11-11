@@ -40,7 +40,7 @@ public class DriverSetup extends ConfigReader{
                 .setBundleId(getProperty("bundle.id"))
                 .setPlatformVersion(getProperty("platform.version"))
                 .setNoReset(false)
-                .setFullReset(true)
+                // .setFullReset(true)
                 .setCapability("autoDismissAlerts", true);
 
         try {
