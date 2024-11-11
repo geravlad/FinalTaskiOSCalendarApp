@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.GlobalVariables;
 
-public class CalendarsPage {
+public class CalendarsPage extends Helpers {
 
     protected IOSDriver driver;
 
@@ -72,6 +72,9 @@ public class CalendarsPage {
 
     @iOSXCUITFindBy(accessibility = "done-button")
     protected RemoteWebElement doneButtonCalendarPage;
+
+    @iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeStaticText[`name == \"Are you sure you want to delete this calendar? All events associated with the calendar will also be deleted.\"`]")
+    protected RemoteWebElement deleteCalendarPopUpTitle;
 
     public CalendarsPage(IOSDriver driver) {
         this.driver = driver;
@@ -140,8 +143,8 @@ public class CalendarsPage {
     public void deleteCalendar() {
         new WebDriverWait(driver, GlobalVariables.globalTimeout).until(ExpectedConditions.visibilityOf(deleteCalendarButton)).isDisplayed();
         deleteCalendarButton.click();
-        new WebDriverWait(driver, GlobalVariables.globalTimeout).until(ExpectedConditions.visibilityOf(deleteCalendarPopUpButton)).isDisplayed();
-        deleteCalendarPopUpButton.click();
+        new WebDriverWait(driver, GlobalVariables.globalTimeout).until(ExpectedConditions.visibilityOf(deleteCalendarPopUpTitle)).isDisplayed();
+        clickCoordinates(driver, 190, 835);
     }
 
     @Step("Click done button on calendars page")
